@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <!--side bar-->
+  <aside class="sidebar">
+    <h2 class="logo">Dashboard</h2>
+    <ul class="menu">
+      <li>Users</li>
+      <li>Products</li>
+      <li>Orders</li>
+      <li>Settings</li>
+  </ul>
+  </aside>
+
+  <!--Main Content-->
+  <div class="main">
+
+<!--Navbar-->
+    <nav class="navbar">
+      <h1>Overview</h1>
+      <div class="nav-actions">
+<button id="addUserBtn">Add User</button>
+
+<div class="dropdown"> 
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+    <a href="#">Profile</a>
+    <a href="#">Settings</a>
+    <a href="#">Logout</a>
+  </div>
+</div>
+      
+      <button id="themeToggle"></button>
+      </div>
+    </nav>
+
+    <!--Cards-->
+    <section class="cards">
+      <div class="card">
+        <h3>Users</h3>
+        <p>1,245</p>
+      </div>
+
+      <div class="card">
+        <h3>Sales</h3>
+        <p>$12,340</p>
+      </div>
+
+      <div class="card">
+        <h3>Orders</h3>
+        <p>320</p>
+      </div>
+
+      <div class="card">
+        <h3>Revenue</h3>
+        <p>$42,400</p>
+      </div>
+    </section>
+
+    <!--Table Section-->
+    <section class="table-section">
+      <h2>Recent Users</h2>
+      <input type="text" id="search" placeholder="Search Users...">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tablebody">
+          <tr>
+            <td>Alan Swag</td>
+            <td>Alan@gmail.com</td>
+            <td>Active</td>
+          </tr>
+          <tr>
+            <td>Sarah Smith</td>
+            <td>sarah@yahoo.com</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>Mark Wilson</td>
+            <td>mark@gmail.com</td>
+            <td>Blocked</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!--Chart-->
+    <section class="chart-section">
+      <h2>Monthly Sales</h2>
+      <canvas id="salesChart"></canvas>
+      </section>
+
+      </div>
+
+
+  <!--Add user modal-->
+  <div id="userModal" class="modal">
+    <div class="modal-content">
+      <h2>Add New User</h2>
+
+      <input type="text" id="newName" placeholder="Enter name">
+      <input type="text" id="newEmail" placeholder="Enter email">
+      <select id="newStatus">
+        <option value="Active">Active</option>
+        <option value="pending">Pending</option>
+        <option value="Blocked">Blocked</option>
+      </select>
+
+      <button id="saveUser">Save</button>
+      <button id="close">Cancel</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>  
+</body>
+</html>
